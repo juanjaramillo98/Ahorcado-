@@ -1,14 +1,13 @@
 var express = require('express');
 var app = express();
-
-
-
-app.get('/',function(req, res) {
-	res.sendFile(__dirname + '/publico/Ahorcado.html');
-});
-app.use('/publico',express.static(__dirname + '/publico'));
+var path = require('path');
 
 var serv = app.listen(2000);
+
+app.get('/',function(req, res) {
+	res.sendFile(path.join(__dirname , 'publico','Ahorcado.html'));
+});
+app.use('/publico',express.static(path.join(__dirname , 'publico')));
 
 const socketIO = require('socket.io');
 const io = socketIO(serv);
