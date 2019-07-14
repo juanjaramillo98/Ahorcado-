@@ -1,9 +1,5 @@
 // ### VARIABLES ###
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 // Palabra a averiguar
 var palabra = "";
 var palabraINS = "";
