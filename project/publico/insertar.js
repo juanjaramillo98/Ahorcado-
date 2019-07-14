@@ -14,9 +14,5 @@ boton.addEventListener('click',()=>{
 });
 socket.on('jugador',(data)=>{
     console.log(data);
-<<<<<<< HEAD
     document.getElementById("jugador_g").innerHTML += "<div>" + data.jugador + "</div>" ;
-=======
-    document.getElementById("jugador_g").innerHTML += "<div>" + data.jugador + "<div/>";
->>>>>>> master
 });
