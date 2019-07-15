@@ -1,15 +1,39 @@
 
+body{
+  font-family: 'Mountains of Christmas', cursive;
+  background-color: brown;
+}
 * {
   box-sizing: border-box;
 }
-.main-container {
+
+.pista{
+  
+  font-weight: bold;
+
+}
+.botones{
+  font-family: 'Mountains of Christmas', cursive;
+  font-weight: bold;
+  background-color: grey;
+  color: black;
+  font-size: 25px;
+  padding: 12px 0;
+  width: 70%;
+  border-color: gray;
+  border-radius: 5px 5px 5px 5px; 
+}
+
+.contenedor-juego {
+  background-color: darkseagreen; 
   max-width: 800px;
   margin: auto;
+  border: 1px solid black;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5)
 }
 h1.titulo {
   margin: 50px auto 80px auto;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 h1#msg-final {
   text-align: center;
@@ -54,6 +78,7 @@ h2.palabra {
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px auto; 
+  font-size: 20px;
 }
 .no-wrap {
   flex-wrap: nowrap !important;
@@ -71,6 +96,12 @@ h2.palabra {
 h3 span {
    color: orangered;
 }
+.letra{
+  border-color: gray;
+  background-color: grey;
+  border-radius: 40%;
+}
+
 .letra:disabled {
   color:rgba(255, 0, 0, 0.5);
 }

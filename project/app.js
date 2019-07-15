@@ -5,7 +5,7 @@ var path = require('path');
 var serv = app.listen(2000);
 
 app.get('/',function(req, res) {
-	res.sendFile(path.join(__dirname , 'publico','Ahorcado.html'));
+	res.sendFile(path.join(__dirname , 'publico','Inicio.html'));
 });
 app.use('/publico',express.static(path.join(__dirname , 'publico')));
 

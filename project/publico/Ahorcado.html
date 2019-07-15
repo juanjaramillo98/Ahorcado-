@@ -3,48 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>ahorcado</title>
-    <link rel="stylesheet" href="publico/estilo-ahoracado.css">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo-ahoracado.css">
   </head>
   <body>
-      <div class="main-container">
+    <div class="contenedor-juego">
+      <h1 class="titulo">Juego del ahorcado</h1>
+      <h1 id="msg-final"></h1>
+      <h3 id="acierto"></h3>
 
-        <h1 class="titulo">Juego del ahorcado</h1>
-        <h1 id="msg-final"></h1>
-        <h3 id="acierto"></h3>
-        <div class="flex-row no-wrap">
-          <h2 class="palabra" id="palabra"></h2>
-          <picture>
-            <img src="publico/img/ahorcado_6.png" alt="" id="image6">
-            <img src="publico/img/ahorcado_5.png" alt="" id="image5">
-            <img src="publico/img/ahorcado_4.png" alt="" id="image4">
-            <img src="publico/img/ahorcado_3.png" alt="" id="image3">
-            <img src="publico/img/ahorcado_2.png" alt="" id="image2">
-            <img src="publico/img/ahorcado_1.png" alt="" id="image1">
-            <img src="publico/img/ahorcado_0.png" alt="" id="image0">
-          </picture>
-        </div>
-        <div class="flex-row" id="turnos">
-          <div class="col">
-            <h3>Intentos restantes: <span id="intentos">6</span></h3>
-          </div>
-          <div class="col">
-            <button onclick="inicio()" id="reset">Elegir otra palabra</button> 
-            <button onclick="pista()" id="pista">Dame una pista!</button>      
-            <span id="hueco-pista"></span>
-          </div>
-          <input type="text" size="15" maxlength="30" value="usuario" name="cajaTexto" id="usuario">
-          </div>
-        
-        <div class="flex-row">
-          <div class="col">
-            <div class="flex-row" id="abcdario">
-            </div>
-          </div>
-          <div class="col"></div>
-        </div>
-
+      <div class="flex-row no-wrap">
+        <h2 class="palabra" id="palabra"></h2>
+        <picture>
+          <img src="img/ahorcado_6.png" alt="" id="image6">
+          <img src="img/ahorcado_5.png" alt="" id="image5">
+          <img src="img/ahorcado_4.png" alt="" id="image4">
+          <img src="img/ahorcado_3.png" alt="" id="image3">
+          <img src="img/ahorcado_2.png" alt="" id="image2">
+          <img src="img/ahorcado_1.png" alt="" id="image1">
+          <img src="img/ahorcado_0.png" alt="" id="image0">
+        </picture>
       </div>
+
+      <div class="flex-row" id="turnos">
+        <div class="col">
+          <h3>Intentos restantes: <span id="intentos">6</span></h3>
+          <div class="flex-row" id="abcdario">
+
+          </div>
+          <span class="pista" id="hueco-pista"></span>
+        </div>
+
+        <div class="col">
+          <button class= "botones" onclick="inicio()" id="reset">Elegir otra palabra</button> 
+          <button class= "botones" onclick="pista()" id="pista">Dame una pista!</button>      
+          <input class= "botones" type="text" id="usuario" placeholder="tu nombre">
+        </div>
+      </div>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="publico/ahorcado.js"></script>
+    <script src="ahorcado.js"></script>
   </body>
 </html>
