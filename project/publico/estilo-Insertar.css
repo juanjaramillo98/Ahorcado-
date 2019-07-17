@@ -1,0 +1,22 @@
+body{
+    background-color: skyblue;
+    
+}
+h1{
+    text-align:center;
+}
+.col {
+    width: 50%;
+    text-align: center;
+}
+
+.insercion{
+    background-color: grey;
+    color: black;
+    font-size: 25px;
+    padding: 12px 0;
+    width: 30%;
+    border-color: gray;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto; 
+}

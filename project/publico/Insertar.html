@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Insertalo</title>
-    <link rel="stylesheet" href="estilo-ahoracado.css">
+    <link rel="stylesheet" href="estilo-Insertar.css">
   </head>
 <body>
-    <h1 class="titulo">Inserta una palabra que quieres que adivinen</h1>
-    <input type="text" size="15" maxlength="30" value="palabra" name="cajaTexto" id="reto">
-    <button  id="adivinalo">Enviar Palabra Y Pista</button>
-    <input type="text" size="15" maxlength="30" value="pista" name="cajaTexto" id="pista">
-    <span id="jugador_g"></span>
-    
+    <h1>Inserta una palabra que quieres que adivinen</h1>
+    <input class="insercion" type="text" size="15" maxlength="30" value="Palabra" name="cajaTexto" id="reto">
+    <button class="insercion" id="adivinalo">Enviar Palabra Y Pista</button>
+    <button class="insercion" id="finalizado">Finalizar partida</button>
+    <input class="insercion" type="text" size="15" maxlength="30" value="Pista" name="cajaTexto" id="pista">
+    <span class="insercion" id="jugador_g"></span>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="insertar.js"></script>
-    
+    <script src="insertar.js"></script>  
 </body>
 </html>
