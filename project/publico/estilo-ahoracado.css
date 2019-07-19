@@ -26,8 +26,8 @@ body{
 
 .contenedor-juego {
   background-color: white; 
-  max-width: 80%;
-  max-width: 80%;
+  max-width: 90%;
+  max-width: 90%;
 
   margin: auto;
   border: 1px solid black;
@@ -101,7 +101,9 @@ h3 span {
 .letra{
   border-color: gray;
   background-color: grey;
-  border-radius: 40%;
+  width: 30%;
+  border-radius: 20%;
+  margin: 2px;
 }
 
 .letra:disabled {
@@ -109,10 +111,11 @@ h3 span {
 }
 picture {
   position: relative;
+  transform: scale(0.7, 0.7);
 }
 picture img {
   position: absolute;
-  top: -203px;
+  top: -250px;
   left: -205px;
   height: 225px;
 }

@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Insertalo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo-Insertar.css">
   </head>
 <body>
     <h1>Inserta una palabra que quieres que adivinen</h1>
-    <input class="insercion" type="text" size="15" maxlength="30" value="Palabra" name="cajaTexto" id="reto">
-    <button class="insercion" id="adivinalo">Enviar Palabra Y Pista</button>
-    <button class="insercion" id="finalizado">Finalizar partida</button>
-    <input class="insercion" type="text" size="15" maxlength="30" value="Pista" name="cajaTexto" id="pista">
-    <span class="insercion" id="jugador_g"></span>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="insertar.js"></script>  
+    <div>
+      <input class="insercion" type="text" size="15" maxlength="30" name="cajaTexto" id="reto" placeholder="PALABRA">
+      <input class="insercion" type="text" size="15" maxlength="30" name="cajaTexto" id="pista" placeholder="PISTA">
+      <div></div>
+      <div>
+        <button class="insercion" id="adivinalo">Enviar Palabra Y Pista</button>
+        <button class="insercion" id="finalizado">Finalizar partida</button>
+      </div>
+      <span class="insercion" id="jugador_g"></span>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="insertar.js"></script>  
+    </div>
 </body>
 </html>
