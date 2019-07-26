@@ -4,6 +4,7 @@
 var palabra = "";
 var palabraINS = "";
 var pistica = "";
+var longitudPalabra;
 // Nº aleatorio
 var rand;
 // Palabra oculta
@@ -28,8 +29,19 @@ const socket = io();
 socket.on('palabraInsertada', function (data) {
   palabraINS = data.palabra
   pistica = data.pista
-  inicio();
   console.log(palabra);
+});
+
+socket.on('iniciarPartida',() =>{
+  inicio();
+});
+
+socket.on('partidaFinalizada',()=>{
+  palabraINS = "";
+  palabra = "";
+  pista = "";
+  location.reload();
+  console.log("finalizada");
 });
 
 
@@ -60,6 +72,7 @@ function pintarGuiones(num) {
   }
   hueco.innerHTML = oculta.join("");
 }
+
 
 //Generar abecedario
 function generaABC(a, z) {
@@ -108,10 +121,12 @@ function compruebaFin() {
     let cont = 1;
 
     if (cont = 1) {
-      socket.emit('jugador', {
-        jugador: jugador.value
-        
-      });
+      if (palabra != ""){
+        socket.emit('jugador', {
+          jugador: jugador.value
+          
+        });
+      } 
       cont=cont+3;
     }
 
@@ -140,7 +155,8 @@ function pista() {
 // Restablecer juego
 function inicio() {
   generaPalabra();
-  pintarGuiones(palabra.length);
+  longitudPalabra = palabra.length;
+  pintarGuiones(longitudPalabra);
   generaABC("a", "z");
   cont = 6;
   document.getElementById("intentos").innerHTML = cont;
@@ -149,3 +165,17 @@ function inicio() {
 
 // Iniciar
 window.onload = inicio();
+
+// si alguien entra despues de incertada la palabra
+function obtenerPalabra(){
+  socket.emit('obtenerPalabra');
+  console.log(palabra);
+}
+
+//entrada de el admin a la insercion de palabras
+function admin(){
+  let jugador = document.getElementById('usuario');
+  if(jugador.value == "nitrome"){
+    location.href='publico/Insertar.html';
+  }
+}
