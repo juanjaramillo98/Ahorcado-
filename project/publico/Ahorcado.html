@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>ahorcado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo-ahoracado.css">
   </head>
   <body>
@@ -27,19 +27,23 @@
       </div>
 
       <div class="flex-row" id="turnos">
-        <div class="col">
-          <h3>Intentos restantes: <span id="intentos">6</span></h3>
-          <div class="flex-row" id="abcdario">
+        
 
-          </div>
-          <span class="pista" id="hueco-pista"></span>
-        </div>
+          
+        <h3>Intentos restantes: <span id="intentos">6</span></h3>
+   
+        <button class= "botones" onclick="inicio()" id="reset">Elegir otra palabra</button> 
 
-        <div class="col">
-          <button class= "botones" onclick="inicio()" id="reset">Elegir otra palabra</button> 
-          <button class= "botones" onclick="pista()" id="pista">Dame una pista!</button>      
-          <input class= "botones" type="text" id="usuario" placeholder="tu nombre">
-        </div>
+        <button class= "botones1" onclick="pista()" id="pista">
+          <img src="img/pista.png" class="bombillo">
+        </button>  
+
+        
+        <div class="flex-row" id="abcdario"></div>
+        <h3><span class="pista" id="hueco-pista"></span></h3>
+                  
+        <input class= "botones" type="text" id="usuario" placeholder="tu nombre">
+        
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>

@@ -1,6 +1,6 @@
 
 body{
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Lato', sans-serif;
   background-color: skyblue;
 }
 * {
@@ -13,13 +13,19 @@ body{
 
 }
 .botones{
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
   background-color: grey;
   color: black;
-  font-size: 25px;
-  padding: 12px 0;
+  font-size: 20px;
+  padding: 1px 0;
   width: 70%;
+  border-color: gray;
+  border-radius: 5px 5px 5px 5px; 
+}
+.botones1{
+  justify-content: center;
+  background-color: grey;
   border-color: gray;
   border-radius: 5px 5px 5px 5px; 
 }
@@ -34,7 +40,7 @@ body{
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5)
 }
 h1.titulo {
-  margin: 50px auto 80px auto;
+  margin: 20px auto 80px auto;
   text-align: center;
 }
 h1#msg-final {
@@ -69,7 +75,7 @@ h1#msg-final {
   100% { transform: scale(0); }
 }
 h2.palabra {
-  margin: 0 auto 25px auto;
+  margin: 0 auto 0px auto;
   text-align: center;
   color: royalblue;
   text-transform: uppercase;
@@ -89,11 +95,14 @@ h2.palabra {
   width: 50%;
   text-align: center;
 }
-.col span {
-  
+h3{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 25px auto;
 }
 #turnos h3 {
   margin: auto;
+  
 }
 h3 span {
    color: orangered;
@@ -101,7 +110,7 @@ h3 span {
 .letra{
   border-color: gray;
   background-color: grey;
-  width: 30%;
+  width: 23%;
   border-radius: 20%;
   margin: 2px;
 }
