@@ -175,7 +175,7 @@ function obtenerPalabra(){
 //entrada de el admin a la insercion de palabras
 function admin(){
   let jugador = document.getElementById('usuario');
-  if(jugador.value == "nitrome"){
+  if(jugador.value == "Nitrome"){
     location.href='publico/Insertar.html';
   }
 }
